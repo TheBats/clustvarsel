@@ -1,0 +1,25 @@
+[package]
+name = "clustvarsel"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+rayon = "1.5.3"
+rand = "0.8.5"
+rand_chacha = "0.3.1"
+num = "0.4.0"
+itertools = "0.10.5"
+csv = "1.1"
+crossbeam = "0.8.2"
+
+[dev-dependencies]
+criterion = {version="0.3",  features = ["html_reports"]}
+
+[[bench]]
+name = "my_benchmark"
+harness = false
+
+[profile.bench]
+debug = true
